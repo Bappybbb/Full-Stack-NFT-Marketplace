@@ -1,0 +1,92 @@
+.box_category {
+  width: 80%;
+  margin: 0 auto; 
+}
+
+.category {
+  padding: 4rem 0;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 2rem;
+}
+
+.category_box {
+  /* line-height: 0; <-- Eta remove kora hoyeche karon eta text cut off korchilo */
+  line-height: 1.2; 
+  transition: all 0.3s ease-in;
+  border-radius: 1rem;
+  overflow: hidden;
+  cursor: pointer;
+  padding-bottom: 1rem;
+}
+
+.category_box:hover {
+  box-shadow: var(--box-shadow);
+}
+
+.category_box_img {
+  border-radius: 1rem;
+  width: 100%;
+  height: auto;
+}
+
+.category_box_title {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  gap: 1rem; 
+  width: 100%; 
+}
+
+.category_box_title span {
+  font-size: 2rem; 
+  margin-top: 0.5rem; /* Ektu adjust kora holo icon er jayga */
+}
+.category_box_title_info {
+  line-height: 1.2;
+  flex: 1; /* ADDED: Eta baki jayga gulo niye nebe */
+  min-width: 0; /* ADDED: Eta chara flexbox e text cut off hoy */
+}
+
+.category_box_title_info h4 {
+  font-size: 1rem;
+  margin: 0;
+  /* Ekhane white-space, overflow, text-overflow add koro jate boro text hole ... ashe */
+  white-space: nowrap; 
+  overflow: hidden; 
+  text-overflow: ellipsis; 
+}
+
+.category_box_title_info small {
+  font-size: 0.8rem;
+}
+
+
+/* ================= MEDIA QUERIES ================= */
+
+@media screen and (max-width: 425px) {
+  .category {
+    grid-template-columns: 1fr;
+  }  
+  .box_category {
+    width: 90%;
+  }
+}
+
+@media screen and (min-width: 426px) and (max-width: 768px) {
+  .category {
+    grid-template-columns: repeat(3, 1fr);
+  }  
+  .box_category {
+    width: 90%;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .category {
+    grid-template-columns: repeat(3, 1fr);
+  }  
+  .box_category {
+    width: 90%;
+  }
+}

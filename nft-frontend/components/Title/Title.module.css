@@ -1,0 +1,30 @@
+.title {
+  width: 80%;
+  margin: 0 auto; /* Added: jate puro section ta center e thake */
+}
+
+.title_box {
+  width: 100%; /* Fixed: 80% theke 100% kora holo karon parent .title already 80% */
+  margin: 0 auto;
+}
+
+.title_box h2 {
+  font-size: 3rem;
+  line-height: 1; 
+}
+
+.title_box p {
+  font-size: 1.2rem;  
+  margin-top: -1rem;
+}
+
+ @media screen and (max-width: 425px) {
+  .title {
+    width: 90%;  
+  }
+
+  .title_box h2 {
+    font-size: 1.8rem;
+    line-height: 1;
+  }
+}

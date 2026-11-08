@@ -1,0 +1,239 @@
+/* =========================================================
+   Filter.module.css  (mobile-first)
+   Base       : phones (< 640px)
+   >= 640px   : large phones / small tablets
+   >= 768px   : tablets
+   >= 1024px  : laptops
+   >= 1440px  : large desktops
+   ========================================================= */
+
+/* ---------- Base (mobile) ---------- */
+.filter {
+  padding: 2rem 0;
+  width: 100%;
+}
+
+.filter_box {
+  width: 92%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding-bottom: 2rem;
+}
+
+/* ---------- Category buttons (NFTs, Arts, Musics, Sports, Photography) ---------- */
+.filter_box_left {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.8rem;
+}
+
+.filter_box_left button {
+  border: 1px solid var(--main-bg-color, #eceff4);
+  outline: none;
+  padding: 0.8rem 0.5rem;
+  border-radius: 2rem;
+  font-size: 1.3rem;
+  font-family: inherit;
+  cursor: pointer;
+  background-color: var(--main-bg-color, #eceff4);
+  color: inherit;
+  transition: border-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Selected category: plain text, slightly bolder */
+.filter_box_left button.category_active {
+  font-weight: 600;
+}
+
+/* ---------- Filter button ---------- */
+.filter_box_right {
+  display: flex;
+}
+
+.filter_box_right_box {
+  width: 100%;
+  border: 1px solid var(--icon-color, #4a5568);
+  background: var(--main-bg-color, #eceff4);
+  font-family: inherit;
+  font-size: 1.2rem;
+  padding: 1rem 2rem;
+  border-radius: 2rem;
+  color: var(--icon-color, #4a5568);
+  box-shadow: var(--box-shadow, 0 6px 14px rgba(0, 0, 0, 0.12));
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  transition: box-shadow 0.3s ease;
+}
+
+/* ---------- Chips row ---------- */
+.filter_box_items {
+  width: 92%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  padding: 2rem 0;
+  border-top: 1px solid var(--line-color, #d3d8e0);
+}
+
+.filter_box_items_box {
+  min-width: 0;
+}
+
+.filter_box_items_box_item,
+.filter_box_items_box_item_trans {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.6rem;
+  font-family: inherit;
+  font-size: 1.1rem;
+  line-height: 1.4;
+  transition: box-shadow 0.3s ease;
+}
+
+/* Solid dark chips: 10 ETH, Verified */
+.filter_box_items_box_item {
+  background-color: var(--icon-color, #4a5568);
+  color: var(--main-bg-color, #eceff4);
+  border: 1px solid var(--icon-color, #4a5568);
+  cursor: default;
+}
+
+/* Outlined chips: Images, Videos, Musics */
+.filter_box_items_box_item_trans {
+  background: transparent;
+  border: 1px solid var(--icon-color, #4a5568);
+  color: var(--icon-color, #4a5568);
+  cursor: pointer;
+}
+
+.filter_box_items_box_item_trans small {
+  font-size: inherit;
+}
+
+/* ---------- Hover (works for ALL buttons) ---------- */
+.filter_box_left button:hover,
+.filter_box_left button.category_active:hover {
+  border: 1px solid var(--icon-color, #4a5568);
+  color: var(--icon-color, #4a5568);
+  box-shadow: var(--box-shadow, 0 6px 14px rgba(0, 0, 0, 0.14));
+}
+
+.filter_box_right_box:hover {
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.18);
+}
+
+.filter_box_items_box_item:hover,
+.filter_box_items_box_item_trans:hover {
+  box-shadow: var(--box-shadow, 0 6px 14px rgba(0, 0, 0, 0.14));
+}
+
+/* ---------- Keyboard focus (Tab key) ---------- */
+.filter_box_left button:focus-visible,
+.filter_box_right_box:focus-visible,
+.filter_box_items_box_item_trans:focus-visible {
+  outline: none;
+  border: 1px solid var(--icon-color, #4a5568);
+  box-shadow: var(--box-shadow, 0 6px 14px rgba(0, 0, 0, 0.14));
+}
+
+/* ---------- Large phones / small tablets ---------- */
+@media screen and (min-width: 640px) {
+  .filter_box,
+  .filter_box_items {
+    width: 90%;
+  }
+
+  .filter_box_left {
+    grid-template-columns: repeat(5, auto);
+    justify-content: start;
+    gap: 1rem;
+  }
+
+  .filter_box_left button {
+    padding: 1rem 1.5rem;
+  }
+
+  .filter_box_items {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ---------- Tablets ---------- */
+@media screen and (min-width: 768px) {
+  .filter {
+    padding: 3rem 0;
+  }
+
+  .filter_box {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    padding-bottom: 3rem;
+  }
+
+  .filter_box_right_box {
+    width: auto;
+  }
+
+  .filter_box_items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 2.5rem 0;
+  }
+
+  .filter_box_items_box_item,
+  .filter_box_items_box_item_trans {
+    width: auto;
+    justify-content: flex-start;
+  }
+}
+
+/* ---------- Laptops ---------- */
+@media screen and (min-width: 1024px) {
+  .filter {
+    padding: 4rem 0;
+  }
+
+  .filter_box,
+  .filter_box_items {
+    width: 85%;
+  }
+
+  .filter_box {
+    padding-bottom: 4rem;
+  }
+
+  .filter_box_left {
+    gap: 1.5rem;
+  }
+}
+
+/* ---------- Large desktops ---------- */
+@media screen and (min-width: 1440px) {
+  .filter_box,
+  .filter_box_items {
+    width: 80%;
+    max-width: 1400px;
+  }
+
+  .filter_box_left {
+    gap: 2rem;
+  }
+
+  .filter_box_left button {
+    padding: 1.1rem 1.8rem;
+    font-size: 1.4rem;
+  }
+}

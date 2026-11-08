@@ -1,0 +1,121 @@
+.subscribe {
+  width: 100%;
+}
+
+.subscribe_box {
+  width: 90%; /* Fixed: 100% theke 90% kora holo jate onno section er sathe match kore */
+  margin: 0 auto;
+  padding: 8rem 0;
+  display: grid;
+  grid-template-columns: 1.5fr 2fr;
+  align-items: center;
+  gap: 2rem; /* Added gap jate text ar image gese na lage */
+}
+
+.subscribe_box_left h2 {
+  font-size: 3rem;
+  line-height: 1.2; /* Fixed: line-height 0 thakle text overlap hoy */
+}
+
+.subscribe_box_left > p { /* Fixed: shudhu left side er p ke target korbe */
+  font-size: 1.2rem;
+  margin-top: 1rem;
+}
+
+.subscribe_box_left_box {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.subscribe_box_left_box small {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.subscribe_box_left_box span {
+  background-color: var(--icons-color);
+  color: var(--main-bg-color);
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  width: 4rem;
+  text-align: center;
+}
+
+.subscribe_box_left_input {
+  margin-top: 3rem;
+  padding: 1rem 2rem; /* Fixed: 2rem theke 1rem 2rem kora holo */
+  width: 80%;
+  border-radius: 4rem;
+  background-color: var(--icons-color); /* Fixed: background-origin theke background-color */
+  color: var(--main-bg-color);
+  display: flex;
+  align-items: center;
+}
+
+.subscribe_box_left_input input {
+  background-color: transparent;
+  border: 0;
+  outline: none;
+  width: 90%;
+  color: var(--main-bg-color); /* Added color jate text dekha jay */
+}
+
+/* Fixed: ::placeholder shudhu input er sathe kaj kore */
+.subscribe_box_left_input input::placeholder {
+  color: var(--main-bg-color);
+  font-size: 1.2rem;
+  opacity: 0.8;
+}
+
+.subscribe_box_left_input_icon {
+  font-size: 2rem;
+  cursor: pointer; /* Added cursor */
+}
+
+/* Fixed: Image jate container er baire na jay */
+.subscribe_box_right_img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* ================= MEDIA QUERIES ================= */
+
+/* First media query (Mobile) - Fixed duplicate 768px */
+@media screen and (max-width: 767px) {
+  .subscribe_box {
+    width: 90%;
+    grid-template-columns: 1fr;
+    gap: 4rem;
+    padding: 4rem 0;
+  }
+
+  .subscribe_box_left_input {
+    width: 100%;
+    padding: 1rem;
+  }
+  
+  .subscribe_box_left h2 {
+    font-size: 2rem;
+  }
+}
+
+/* Second media query (Tablet) */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .subscribe_box {
+    width: 90%;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4rem;
+  }
+
+  .subscribe_box_left_input {
+    width: 100%;
+    padding: 1rem;
+  }
+  
+  .subscribe_box_left h2 {
+    font-size: 2rem;
+  }
+}

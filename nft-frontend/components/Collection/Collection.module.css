@@ -1,0 +1,140 @@
+.collection {
+  width: 100%;
+  padding: 3rem 0;
+  padding-bottom: 10rem;
+}
+
+.collection_title {
+  width: 90%;
+  max-width: 35rem;
+  margin: 0 auto;
+  padding: 0 0 6rem 0;
+  text-align: center;
+}
+
+.collection_title h2 {
+  font-size: 3rem;
+  margin-bottom: 4rem;
+}
+
+.collection_collections_btn {
+  background-color: var(--main-bg-color);
+  padding: 0.5rem 1rem;
+  border-radius: 4rem;
+  display: flex;
+  justify-content: space-around;
+  gap: 1rem;
+  font-size: 1.2rem;
+  align-items: center;
+  box-shadow: var(--box-shadow);
+}
+
+.collection_collections_btn button {
+  background-color: var(--icons-color);
+  color: var(--main-bg-color);
+  padding: 1rem;
+  border: 1px solid var(--icons-color);
+  border-radius: 4rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in;
+}
+
+.collection_collections_btn button:hover {
+  background-color: transparent;
+  color: var(--icons-color);
+}
+
+/* default = laptop: 3 columns */
+.collection_box {
+  width: 85%;
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+/* ================= DESKTOP (1441px+) ================= */
+@media screen and (min-width: 1441px) {
+  .collection_title {
+    max-width: 40rem;
+  }
+
+  .collection_box {
+    width: 80%;
+    max-width: 1600px;
+    gap: 2.5rem;
+  }
+}
+
+/* ================= LAPTOP (1025px - 1440px) ================= */
+@media screen and (min-width: 1025px) and (max-width: 1440px) {
+  .collection_title h2 {
+    font-size: 2.6rem;
+    margin-bottom: 3rem;
+  }
+
+  .collection_box {
+    width: 88%;
+    gap: 1.5rem;
+  }
+}
+
+/* ================= TABLET (641px - 1024px) ================= */
+@media screen and (min-width: 641px) and (max-width: 1024px) {
+  .collection_title {
+    padding-bottom: 4rem;
+  }
+
+  .collection_title h2 {
+    font-size: 2.4rem;
+    margin-bottom: 3rem;
+  }
+
+  .collection_collections_btn {
+    flex-wrap: wrap;
+  }
+
+  .collection_collections_btn button {
+    font-size: 1rem;
+  }
+
+  .collection_box {
+    width: 90%;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+}
+
+/* ================= MOBILE (up to 640px) ================= */
+@media screen and (max-width: 640px) {
+  .collection {
+    padding-bottom: 6rem;
+  }
+
+  .collection_title {
+    padding-bottom: 3rem;
+  }
+
+  .collection_title h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .collection_collections_btn {
+    flex-wrap: wrap;
+    border-radius: 2rem;
+    gap: 0.5rem;
+  }
+
+  .collection_collections_btn button {
+    font-size: 0.8rem;
+    padding: 0.7rem 1rem;
+  }
+
+  .collection_box {
+    width: 92%;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}

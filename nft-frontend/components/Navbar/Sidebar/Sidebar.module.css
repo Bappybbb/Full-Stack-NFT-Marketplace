@@ -1,0 +1,102 @@
+.sideBar {
+  min-height: 100%;
+  padding-bottom: 2rem;
+  color: var(--icons-color);
+}
+
+.sideBar_closeBtn {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.25rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+}
+
+.sideBar_box {
+  padding: 2rem;
+  border-bottom: 1px solid var(--icons-color);
+  background-color: var(--main-bg-color);
+}
+
+.sideBar_box img {
+  display: block;
+  width: min(9rem, 70%);
+  height: auto;
+}
+
+.sideBar_box p {
+  line-height: 1.6;
+}
+
+.sideBar_social {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  font-size: 1.4rem;
+}
+
+.sideBar_menu {
+  display: grid;
+  gap: 0.5rem;
+  padding: 1.25rem 2rem;
+}
+
+.sideBar_menu_box {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  min-height: 3rem;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.sideBar_menu_box p {
+  margin: 0;
+}
+
+.sideBar_discover {
+  padding: 0 0 0.5rem 1rem;
+}
+
+.sideBar_discover p {
+  margin: 0;
+  padding: 0.5rem 0;
+}
+
+.sideBar_button {
+  display: grid;
+  gap: 0.75rem;
+  padding: 0 2rem;
+}
+
+.sideBar_button > div,
+.sideBar_button button {
+  width: 100%;
+}
+
+.sideBar_button button {
+  padding-inline: 1rem;
+}
+
+@media screen and (max-width: 360px) {
+  .sideBar_box,
+  .sideBar_menu {
+    padding-inline: 1.25rem;
+  }
+
+  .sideBar_button {
+    padding-inline: 1.25rem;
+  }
+}
